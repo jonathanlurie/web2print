@@ -1,0 +1,16 @@
+{
+  "name": "web2print",
+  "version": "1.0.0",
+  "description": "Converts HTML+CSS into PDF, with @page and all the print styling rules. Uses Puppeteer under the hood.",
+  "bin": {
+    "web2print": "./bin/web2print.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^1.6.2"
+  }
+}

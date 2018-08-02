@@ -1,0 +1,85 @@
+
+
+@media print {
+  body {
+    margin: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 1em;
+    color: #333333;
+  }
+
+  /* Specification for the Digital Tabloid of Newspaper Club*/
+  @page {
+    size:289mm 380mm;
+    margin-top: 15mm;
+    margin-bottom: 15mm;
+  }
+
+  /* First page, 10 cm margin on top */
+  @page :first {
+    /*margin-top: 10cm*/
+  }
+
+  /* the css print rule usualy says the right margin is larger on the left page
+     (and vice versa) because of the stitch gap, but Digital Tabloid allows
+     "poster print" with no gap in the middle, so we dont what to force if by default.
+
+  @page :left {
+    margin-left: 3cm;
+    margin-right: 2cm;
+  }
+
+  @page :right {
+    margin-left: 2cm;
+    margin-right: 3cm;
+  }
+  */
+
+  @page :left {
+    margin-left: 15mm;
+    margin-right: 0mm;
+  }
+
+  @page :right {
+    margin-left: 0mm;
+    margin-right: 15mm;
+  }
+
+  p {
+    orphans:3; /* no single line at the bottom */
+    widows:3;
+  }
+
+  h1 {
+    page-break-before: always; /* everyt title starts on a new page*/
+  }
+
+  h1, h2, h3, caption {
+    page-break-after: avoid; /* no page break after these */
+  }
+
+
+  .multicol3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    column-count: 3;
+    column-gap: 1cm;
+  }
+
+  .justified {
+    text-align: justify;
+  }
+
+  .width100pc {
+    width: 100%;
+  }
+
+  .pagebreak {
+    width: 0;
+    height: 0;
+    page-break-after: avoid;
+    page-break-before: always;
+  }
+
+
+}
