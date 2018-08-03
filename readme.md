@@ -4,7 +4,7 @@ Motivation: create print ready multipage documents without having to rely on hea
 
 **Usage**
 
-- install: `npm install web2print -g` *(sudo may be necessary)*
+- install: `npm install web2print -g --unsafe-perm=true --allow-root` *(sudo is necessary)*
 - run: `web2print -in=path/to/inputfile.html -out=/path/to/output.pdf`
 - watch: `web2print -in=path/to/inputfile.html -out=/path/to/output.pdf -watch` to keep creating the output pdf whenever the input is modified and saved.
 
