@@ -4,7 +4,8 @@ Motivation: create print ready multipage documents without having to rely on hea
 
 **Usage**
 
-install: `npm install web2print -g` *(sudo may be necessary)*
-run: `web2print -in=path/to/inputfile.html -out=/path/to/output.pdf`
+- install: `npm install web2print -g` *(sudo may be necessary)*
+- run: `web2print -in=path/to/inputfile.html -out=/path/to/output.pdf`
+- watch: `web2print -in=path/to/inputfile.html -out=/path/to/output.pdf -watch` to keep creating the output pdf whenever the input is modified and saved.
 
-*Note* that the input HTML file can import (link) CSS files that contain all the formatting rules, including the *print* rules. 
+*Note* that the input HTML file can import (link) CSS files that contain all the formatting rules, including the *print* rules.
